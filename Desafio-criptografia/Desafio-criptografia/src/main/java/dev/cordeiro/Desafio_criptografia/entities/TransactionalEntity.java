@@ -19,7 +19,7 @@ public class TransactionalEntity {
     @Id
     @Column(name= "transactional_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long transactionalId;
+    private Long transactionId;
 
     @Column(name = "user_document")
     private String encryptedUserDocument;
@@ -28,7 +28,7 @@ public class TransactionalEntity {
     private String encryptedCreditCardToken;
 
     @Column(name = "transactional_value")
-    private long transactionalValue;
+    private long transactionValue;
 
     @Transient
     private String rawUserDocument;
